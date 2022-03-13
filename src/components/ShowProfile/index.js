@@ -1,9 +1,13 @@
 import React from 'react';
+import './ShowProfile.scss';
+import 'axios';
 
-const ShowProfile = () => {
+const ShowProfile = ({token}) => {
+
+ 
   return (
-    <div className="ShowProfile">
-      ShowProfile
+    <div className="profile-container">
+      
     </div>
   );
 }
