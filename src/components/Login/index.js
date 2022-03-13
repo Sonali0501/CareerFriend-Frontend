@@ -4,7 +4,7 @@ import './Login.css';
 const Login = () => {
   return (
     <div className="Login">
-      Start working here
+      Login
     </div>
   );
 }
