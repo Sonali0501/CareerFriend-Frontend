@@ -1,0 +1,16 @@
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+
+    .name{
+        margin: 0px;
+        font-weight: 700;
+        color: black;
+    }
+    .level {
+        margin: 0px;
+        color: gray;
+    }
+}

@@ -1,0 +1,38 @@
+.basicInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    .profileIcon {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: gray;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .name {
+            margin: 0px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .type {
+            margin: 0px;
+            font-size: 16px;
+            font-weight: 400;
+            color: gray;
+        }
+
+        .values {
+            margin: 0px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

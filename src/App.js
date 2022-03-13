@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Login from './components/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './containers/LandingPage';
-import ShowProfile from './components/ShowProfile';
+import ShowProfile from './containers/ShowProfile';
 
 const App = () => {
   return (
