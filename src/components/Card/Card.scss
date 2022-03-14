@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 32px;
+    padding: 48px;
+    background-color: #E5E4E2;
 
     .title {
         margin: 0px;
@@ -18,13 +19,5 @@
         margin: 0px;
         font-size: 16px;
         font-weight: 400;
-    }
-
-    .actions{
-        display: flex;
-        flex-direction: row;
-        align-self: flex-end;
-        gap: 16px;
-        align-items: center;
     }
 }

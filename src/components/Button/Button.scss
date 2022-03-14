@@ -4,10 +4,11 @@
     background-color: #e06b6b;
     border: none;
     border-radius: 5px;
-    padding: 12px;
+    padding: 12px 24px;
     color: #fff;
     font-weight: 700;
     cursor: pointer;
+    width: fit-content;
 }
 
 .secondary {
@@ -15,9 +16,10 @@
     font-size: 16px;
     border: 1px solid #e06b6b;
     border-radius: 5px;
-    padding: 12px;
+    padding: 12px 24px;
     color: #e06b6b;
     font-weight: 700;
     background-color: #fff;
     cursor: pointer;
+    width: fit-content;
 }
