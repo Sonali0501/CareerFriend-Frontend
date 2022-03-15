@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SignupForm from '../../components/Signup';
 import './Signup.scss';
 
-const Signup = () => {
+const Signup = ({user}) => {
 
     const location = useLocation()
     const param = location.search?.split('=')[1]
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(user?.token) {
+            navigate('/profile')
+        }
+    },[user])
+
     
     return (
         <div className="signup">
-            <p className="heading">Join as <span className="type">{param.toUpperCase()}</span></p>
-            <SignupForm type={param} />
+            <p className="heading">Join as <span className="type">{param?.toUpperCase()}</span></p>
+            <SignupForm type={param} err={user?.error ? user?.message : null} />
         </div>
     )
 }
 
-export default connect()(Signup);
+const mapStateToProps = (state) => {
+    return { user: state.user }
+}
+
+export default connect(mapStateToProps)(Signup);

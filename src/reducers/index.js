@@ -1,11 +1,15 @@
 import { combineReducers } from 'redux';
-import { LOGIN_USER, LOGIN_USER_ERROR } from '../actionCreators/types';
+import { LOGIN_USER, LOGIN_USER_ERROR, SIGNUP_USER, SIGNUP_USER_ERROR } from '../actionCreators/types';
 
 const user = (state = {} , action) => {
     switch(action.type) {
         case LOGIN_USER:
             return action.payload
         case LOGIN_USER_ERROR:
+            return action.payload
+        case SIGNUP_USER:
+            return action.payload
+        case SIGNUP_USER_ERROR:
             return action.payload
         default:
             return state

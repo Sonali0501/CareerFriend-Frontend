@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { PrimaryButton } from '../Button';
+import { connect } from 'react-redux';
+import { signup } from '../../actionCreators';
 import './Signup.scss';
 
-const SignupForm = ({ type }) => {
+const SignupForm = ({ type, err, signup }) => {
 
     const [name, setName] = useState()
     const [email, setEmail] = useState()
@@ -24,7 +26,7 @@ const SignupForm = ({ type }) => {
                 phone: phone,
                 password: password
             }
-            console.log(data)
+            signup(data);
         }
     }
 
@@ -37,10 +39,10 @@ const SignupForm = ({ type }) => {
             <input className="input" type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
             <input className="input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
             <input className="input" type="password" placeholder="Confirm Password" value={cnfPassword} onChange={(e) => setCnfPassword(e.target.value)} required />
-            {error ? <p className="errorMsg">{error}</p> : null}
+            {error ? <p className="errorMsg">{error}</p> : err ? <p className="errorMsg">{err}</p> : null}
             <PrimaryButton text="Submit" />
         </form>
     )
 }
 
-export default SignupForm;
+export default connect(null, { signup })(SignupForm);
