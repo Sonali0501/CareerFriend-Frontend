@@ -4,7 +4,7 @@ import { login } from '../../actionCreators';
 import { PrimaryButton } from '../Button';
 import './Login.scss';
 
-const Login = ({ login }) => {
+const Login = ({ login, err }) => {
 
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
@@ -24,6 +24,7 @@ const Login = ({ login }) => {
       <hr style={{ width: '100%' }} />
       <input className="input" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       <input className="input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      {err ? <p className="errorMsg">{err}</p> : null}
       <PrimaryButton text="Submit" />
     </form>
   );

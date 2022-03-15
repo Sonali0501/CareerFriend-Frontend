@@ -21,7 +21,7 @@ const LandingPage = ({ user }) => {
     return  (
         <div className="container">
             <Card title="For Mentors" desc={desc} />
-            <Login />
+            <Login  err={user?.error && user?.message} />
             <Card title="For Mentees" desc={desc} />
         </div>
     )

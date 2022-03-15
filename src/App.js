@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Header from './components/Header';
 import LandingPage from './containers/LandingPage';
 import ShowProfile from './containers/ShowProfile';
+import Signup from './containers/Signup';
 
 const App = ({user}) => {
 
@@ -13,6 +14,7 @@ const App = ({user}) => {
       <Router>
           <Routes>
             <Route path="/" exact element={<LandingPage />} />
+            <Route path="/signup" exact element={<Signup />} />
             <Route path="/profile" exact element={<ShowProfile />} />
           </Routes>
       </Router>
