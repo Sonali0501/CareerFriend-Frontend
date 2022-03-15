@@ -1,0 +1,30 @@
+.sec{
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;   
+
+        .lang {
+            font-weight: 500;
+        }
+    }
+
+    .nodata {
+        font-size: 18px;
+        color: gray;
+        font-weight: 600;
+    }
+
+    .head {
+        margin: 0px;
+        margin-top: 32px;
+        color: #e06b6b;
+    }
+}

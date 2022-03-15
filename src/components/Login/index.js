@@ -30,8 +30,4 @@ const Login = ({ login, err }) => {
   );
 }
 
-// const mapStateToProps = (state) => {
-//   return { user: state.user }
-// }
-
 export default connect(null, { login })(Login);

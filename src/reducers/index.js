@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { LOGIN_USER, LOGIN_USER_ERROR, SIGNUP_USER, SIGNUP_USER_ERROR } from '../actionCreators/types';
+import { LOGIN_USER, LOGIN_USER_ERROR, SIGNUP_USER, SIGNUP_USER_ERROR, GET_PROFILE, GET_PROFILE_ERROR } from '../actionCreators/types';
 
 const user = (state = {} , action) => {
     switch(action.type) {
@@ -16,6 +16,18 @@ const user = (state = {} , action) => {
     }
 };
 
+const profile = (state = {}, action) => {
+    switch(action.type) {
+        case GET_PROFILE:
+            return action.payload
+        case GET_PROFILE_ERROR:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    user: user
+    user: user,
+    profile: profile
 });

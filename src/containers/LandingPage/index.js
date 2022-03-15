@@ -13,8 +13,6 @@ const LandingPage = ({ user }) => {
     useEffect(() => {
         if(user?.token) {
             navigate('/profile')
-        } else {
-            navigate('/')
         }
     },[user])
 

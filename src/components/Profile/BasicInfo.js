@@ -14,7 +14,7 @@ const BasicInfo = ({ user }) => {
                 <div>
                 <p className="values">Email: {user?.email}</p>
                 <p className="values">Phone: {user?.phone}</p>
-                <p className="values">Location: {user?.location}</p>
+                {user?.location && <p className="values">Location: {user?.location}</p>}
                 </div>
             </div>
         </div>
